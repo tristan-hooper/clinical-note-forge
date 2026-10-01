@@ -1,0 +1,11 @@
+START,STOP,PATIENT,ENCOUNTER,SYSTEM,CODE,DESCRIPTION,BASE_COST,REASONCODE,REASONDESCRIPTION
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p01,synthetic-e01-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p02,synthetic-e02-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p03,synthetic-e03-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p04,synthetic-e04-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p05,synthetic-e05-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p06,synthetic-e06-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p07,synthetic-e07-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p08,synthetic-e08-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p09,synthetic-e09-b,http://snomed.info/sct,171207006,Depression screening,,,
+2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p10,synthetic-e10-b,http://snomed.info/sct,171207006,Depression screening,,,

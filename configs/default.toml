@@ -1,0 +1,12 @@
+seed = 42
+renderer = "template"
+styles = ["concise", "soap", "narrative"]
+style_weights = [1.0, 1.0, 1.0]
+split_proportions = [0.8, 0.1, 0.1]
+selection_fraction = 1.0
+retries = 2
+model = ""
+temperature = 0.2
+timeout_seconds = 60.0
+max_response_tokens = 4096
+cache_dir = ".cache/clinicalnoteforge"

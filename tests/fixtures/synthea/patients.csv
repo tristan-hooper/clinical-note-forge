@@ -1,0 +1,11 @@
+Id,BIRTHDATE,DEATHDATE,SSN,DRIVERS,PASSPORT,PREFIX,FIRST,MIDDLE,LAST,SUFFIX,MAIDEN,MARITAL,RACE,ETHNICITY,GENDER,BIRTHPLACE,ADDRESS,CITY,STATE,COUNTY,FIPS,ZIP,LAT,LON,HEALTHCARE_EXPENSES,HEALTHCARE_COVERAGE,INCOME
+synthetic-p01,1961-03-15,,,,,,Fabricated1,,Example,,,,other,nonhispanic,F,,,,,,,,,,,,
+synthetic-p02,1962-03-15,,,,,,Fabricated2,,Example,,,,other,nonhispanic,M,,,,,,,,,,,,
+synthetic-p03,1963-03-15,,,,,,Fabricated3,,Example,,,,other,nonhispanic,F,,,,,,,,,,,,
+synthetic-p04,1964-03-15,,,,,,Fabricated4,,Example,,,,other,nonhispanic,M,,,,,,,,,,,,
+synthetic-p05,1965-03-15,,,,,,Fabricated5,,Example,,,,other,nonhispanic,F,,,,,,,,,,,,
+synthetic-p06,1966-03-15,,,,,,Fabricated6,,Example,,,,other,nonhispanic,M,,,,,,,,,,,,
+synthetic-p07,1967-03-15,,,,,,Fabricated7,,Example,,,,other,nonhispanic,F,,,,,,,,,,,,
+synthetic-p08,1968-03-15,,,,,,Fabricated8,,Example,,,,other,nonhispanic,M,,,,,,,,,,,,
+synthetic-p09,1969-03-15,,,,,,Fabricated9,,Example,,,,other,nonhispanic,F,,,,,,,,,,,,
+synthetic-p10,1970-03-15,,,,,,Fabricated10,,Example,,,,other,nonhispanic,M,,,,,,,,,,,,

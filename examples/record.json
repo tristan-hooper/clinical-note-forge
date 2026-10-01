@@ -1,0 +1,327 @@
+{
+  "schema_version": "2.0",
+  "record_id": "0380609583250c48ea86c060043c12567c7471e93c8496a5c93bf190c64ac297",
+  "patient_id": "synthetic-p01",
+  "encounter_id": "synthetic-e01-a",
+  "split": "train",
+  "note": {
+    "style": "concise",
+    "text": "Progress note\nEncounter for check up on 2024-01-10.\n62-year-old patient; sex recorded as F.\nDx: Type 2 diabetes mellitus; Acute bronchitis.\nMeds: Metformin hydrochloride 500 MG Oral Tablet.\nObs: Body weight: 61.00 kg; Hemoglobin A1c: 8.20 %."
+  },
+  "target": {
+    "conditions": [
+      {
+        "description": "Type 2 diabetes mellitus"
+      },
+      {
+        "description": "Acute bronchitis"
+      }
+    ],
+    "medications": [
+      {
+        "description": "Metformin hydrochloride 500 MG Oral Tablet"
+      }
+    ],
+    "observations": [
+      {
+        "description": "Body weight",
+        "value": "61.00",
+        "unit": "kg"
+      },
+      {
+        "description": "Hemoglobin A1c",
+        "value": "8.20",
+        "unit": "%"
+      }
+    ],
+    "procedures": []
+  },
+  "selected_facts": {
+    "conditions": [
+      {
+        "fact_id": "COND_1de79eac8a331e79a54a4eb10b6d0747f5d9633b6168784d0bd05870c1ac8253",
+        "patient_id": "synthetic-p01",
+        "encounter_id": "synthetic-e01-a",
+        "code": "44054006",
+        "description": "Type 2 diabetes mellitus",
+        "system": "http://snomed.info/sct",
+        "source": {
+          "table": "conditions",
+          "row": 2,
+          "row_sha256": "985007eb988ba7d7b17e1652323816a03b372bec818b7064f3b2fce0fa9c9fc7"
+        },
+        "start": "2023-12-01",
+        "stop": null,
+        "originating_encounter_start": "2024-01-10T10:00:00Z",
+        "active_at_encounter": true
+      },
+      {
+        "fact_id": "COND_c8eb6f4070342eacaab2d02458feac83d1fc9e8e6e364bd3cbc6c19d1806a6b9",
+        "patient_id": "synthetic-p01",
+        "encounter_id": "synthetic-e01-a",
+        "code": "10509002",
+        "description": "Acute bronchitis",
+        "system": "http://snomed.info/sct",
+        "source": {
+          "table": "conditions",
+          "row": 12,
+          "row_sha256": "9a7de5b2e63361973e0cb2d710f24f6bc4209ef93defc1568d8254574c322cfb"
+        },
+        "start": "2024-01-10",
+        "stop": "2024-01-31",
+        "originating_encounter_start": "2024-01-10T10:00:00Z",
+        "active_at_encounter": true
+      }
+    ],
+    "medications": [
+      {
+        "fact_id": "MED_0e9632d1e1bce9ff2e51d5a36b802f4aa2eb7a5fef00521e176b2afe5832f844",
+        "patient_id": "synthetic-p01",
+        "encounter_id": "synthetic-e01-a",
+        "code": "860975",
+        "description": "Metformin hydrochloride 500 MG Oral Tablet",
+        "system": null,
+        "source": {
+          "table": "medications",
+          "row": 2,
+          "row_sha256": "2500c3dc9bb348d6e5fcbe1289546118a60f0303a4a3c58515863339171a0448"
+        },
+        "start": "2024-01-10T10:00:00Z",
+        "stop": null,
+        "reason": "Type 2 diabetes mellitus",
+        "active_at_encounter": true
+      }
+    ],
+    "observations": [
+      {
+        "fact_id": "OBS_a62727bedf1abe85a5b1313ec0ad230354df93ebc5e091468ea01370395a5a61",
+        "patient_id": "synthetic-p01",
+        "encounter_id": "synthetic-e01-a",
+        "code": "29463-7",
+        "description": "Body weight",
+        "system": null,
+        "source": {
+          "table": "observations",
+          "row": 2,
+          "row_sha256": "574d4188cee872863359e8dec9d5353bb5519830844e603222be2d70246d66e1"
+        },
+        "timestamp": "2024-01-10T10:10:00Z",
+        "value": "61.00",
+        "unit": "kg",
+        "category": "vital-signs",
+        "value_type": "numeric"
+      },
+      {
+        "fact_id": "OBS_f5941309ac6d55dec933ff94fbf285478d3fa04803a3504ffde69048594c0c12",
+        "patient_id": "synthetic-p01",
+        "encounter_id": "synthetic-e01-a",
+        "code": "4548-4",
+        "description": "Hemoglobin A1c",
+        "system": null,
+        "source": {
+          "table": "observations",
+          "row": 22,
+          "row_sha256": "26555e7a6ef094c5266e7e444b4627ef88c870e8cd1ee47b73b12e048469ca5d"
+        },
+        "timestamp": "2024-01-10T10:05:00Z",
+        "value": "8.20",
+        "unit": "%",
+        "category": "laboratory",
+        "value_type": "numeric"
+      }
+    ],
+    "procedures": []
+  },
+  "annotations": [
+    {
+      "fact_id": "synthetic-e01-a",
+      "placeholder": "ENCOUNTER_DESCRIPTION",
+      "entity_type": "ENCOUNTER",
+      "text": "Encounter for check up",
+      "start": 14,
+      "end": 36,
+      "source_code": null,
+      "source_table": "encounters",
+      "source_row": 2
+    },
+    {
+      "fact_id": "synthetic-e01-a",
+      "placeholder": "ENCOUNTER_DATE",
+      "entity_type": "DATE",
+      "text": "2024-01-10",
+      "start": 40,
+      "end": 50,
+      "source_code": null,
+      "source_table": "encounters",
+      "source_row": 2
+    },
+    {
+      "fact_id": "synthetic-p01",
+      "placeholder": "AGE",
+      "entity_type": "AGE",
+      "text": "62",
+      "start": 52,
+      "end": 54,
+      "source_code": null,
+      "source_table": "patients",
+      "source_row": 2
+    },
+    {
+      "fact_id": "synthetic-p01",
+      "placeholder": "SEX",
+      "entity_type": "SEX",
+      "text": "F",
+      "start": 89,
+      "end": 90,
+      "source_code": null,
+      "source_table": "patients",
+      "source_row": 2
+    },
+    {
+      "fact_id": "COND_1de79eac8a331e79a54a4eb10b6d0747f5d9633b6168784d0bd05870c1ac8253",
+      "placeholder": "COND_1",
+      "entity_type": "CONDITION",
+      "text": "Type 2 diabetes mellitus",
+      "start": 96,
+      "end": 120,
+      "source_code": "44054006",
+      "source_table": "conditions",
+      "source_row": 2
+    },
+    {
+      "fact_id": "COND_c8eb6f4070342eacaab2d02458feac83d1fc9e8e6e364bd3cbc6c19d1806a6b9",
+      "placeholder": "COND_2",
+      "entity_type": "CONDITION",
+      "text": "Acute bronchitis",
+      "start": 122,
+      "end": 138,
+      "source_code": "10509002",
+      "source_table": "conditions",
+      "source_row": 12
+    },
+    {
+      "fact_id": "MED_0e9632d1e1bce9ff2e51d5a36b802f4aa2eb7a5fef00521e176b2afe5832f844",
+      "placeholder": "MED_1",
+      "entity_type": "MEDICATION",
+      "text": "Metformin hydrochloride 500 MG Oral Tablet",
+      "start": 146,
+      "end": 188,
+      "source_code": "860975",
+      "source_table": "medications",
+      "source_row": 2
+    },
+    {
+      "fact_id": "OBS_a62727bedf1abe85a5b1313ec0ad230354df93ebc5e091468ea01370395a5a61",
+      "placeholder": "OBS_1_NAME",
+      "entity_type": "OBSERVATION_NAME",
+      "text": "Body weight",
+      "start": 195,
+      "end": 206,
+      "source_code": "29463-7",
+      "source_table": "observations",
+      "source_row": 2
+    },
+    {
+      "fact_id": "OBS_a62727bedf1abe85a5b1313ec0ad230354df93ebc5e091468ea01370395a5a61",
+      "placeholder": "OBS_1_VALUE",
+      "entity_type": "OBSERVATION_VALUE",
+      "text": "61.00",
+      "start": 208,
+      "end": 213,
+      "source_code": "29463-7",
+      "source_table": "observations",
+      "source_row": 2
+    },
+    {
+      "fact_id": "OBS_a62727bedf1abe85a5b1313ec0ad230354df93ebc5e091468ea01370395a5a61",
+      "placeholder": "OBS_1_UNIT",
+      "entity_type": "OBSERVATION_UNIT",
+      "text": "kg",
+      "start": 214,
+      "end": 216,
+      "source_code": "29463-7",
+      "source_table": "observations",
+      "source_row": 2
+    },
+    {
+      "fact_id": "OBS_f5941309ac6d55dec933ff94fbf285478d3fa04803a3504ffde69048594c0c12",
+      "placeholder": "OBS_2_NAME",
+      "entity_type": "OBSERVATION_NAME",
+      "text": "Hemoglobin A1c",
+      "start": 218,
+      "end": 232,
+      "source_code": "4548-4",
+      "source_table": "observations",
+      "source_row": 22
+    },
+    {
+      "fact_id": "OBS_f5941309ac6d55dec933ff94fbf285478d3fa04803a3504ffde69048594c0c12",
+      "placeholder": "OBS_2_VALUE",
+      "entity_type": "OBSERVATION_VALUE",
+      "text": "8.20",
+      "start": 234,
+      "end": 238,
+      "source_code": "4548-4",
+      "source_table": "observations",
+      "source_row": 22
+    },
+    {
+      "fact_id": "OBS_f5941309ac6d55dec933ff94fbf285478d3fa04803a3504ffde69048594c0c12",
+      "placeholder": "OBS_2_UNIT",
+      "entity_type": "OBSERVATION_UNIT",
+      "text": "%",
+      "start": 239,
+      "end": 240,
+      "source_code": "4548-4",
+      "source_table": "observations",
+      "source_row": 22
+    }
+  ],
+  "source": {
+    "dataset": "synthea-compatible-synthetic",
+    "patient": {
+      "patient_id": "synthetic-p01",
+      "birth_date": "1961-03-15",
+      "sex": "F",
+      "synthetic_name": "Fabricated1 Example",
+      "race": "other",
+      "ethnicity": "nonhispanic",
+      "source": {
+        "table": "patients",
+        "row": 2,
+        "row_sha256": "57a61dd5588708cedb56fc6bc2e522d23c3dddb9851201c81b51c2c7cd74106a"
+      }
+    },
+    "encounter": {
+      "encounter_id": "synthetic-e01-a",
+      "patient_id": "synthetic-p01",
+      "start": "2024-01-10T10:00:00Z",
+      "stop": "2024-01-10T10:30:00Z",
+      "encounter_class": "ambulatory",
+      "description": "Encounter for check up",
+      "reason": "Type 2 diabetes mellitus",
+      "age": 62,
+      "source": {
+        "table": "encounters",
+        "row": 2,
+        "row_sha256": "8d8df030f2506feca36a14fc4bb6a25e882d4f799e53c80f5b9b891b66f16453"
+      }
+    }
+  },
+  "generation": {
+    "renderer": "template",
+    "model": null,
+    "provider": null,
+    "prompt_version": "2.0",
+    "seed": 42,
+    "settings": {},
+    "template": "Progress note\n[[ENCOUNTER_DESCRIPTION]] on [[ENCOUNTER_DATE]].\n[[AGE]]-year-old patient; sex recorded as [[SEX]].\nDx: [[COND_1]]; [[COND_2]].\nMeds: [[MED_1]].\nObs: [[OBS_1_NAME]]: [[OBS_1_VALUE]] [[OBS_1_UNIT]]; [[OBS_2_NAME]]: [[OBS_2_VALUE]] [[OBS_2_UNIT]].",
+    "attempts": 1,
+    "failures": [],
+    "cached": false
+  },
+  "validation": {
+    "passed": true,
+    "issues": []
+  }
+}

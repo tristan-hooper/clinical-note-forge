@@ -1,0 +1,12 @@
+START,STOP,PATIENT,PAYER,ENCOUNTER,CODE,DESCRIPTION,BASE_COST,PAYER_COVERAGE,DISPENSES,TOTALCOST,REASONCODE,REASONDESCRIPTION
+2024-01-10T10:00:00Z,,synthetic-p01,,synthetic-e01-a,860975,Metformin hydrochloride 500 MG Oral Tablet,,,,,44054006,Type 2 diabetes mellitus
+2024-01-10T10:00:00Z,,synthetic-p02,,synthetic-e02-a,314076,Lisinopril 10 MG Oral Tablet,,,,,59621000,Essential hypertension
+2024-01-10T10:00:00Z,,synthetic-p03,,synthetic-e03-a,745679,Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler,,,,,195967001,Asthma
+2024-01-10T10:00:00Z,,synthetic-p04,,synthetic-e04-a,860975,Metformin hydrochloride 500 MG Oral Tablet,,,,,44054006,Type 2 diabetes mellitus
+2024-01-10T10:00:00Z,,synthetic-p05,,synthetic-e05-a,314076,Lisinopril 10 MG Oral Tablet,,,,,59621000,Essential hypertension
+2024-01-10T10:00:00Z,,synthetic-p06,,synthetic-e06-a,745679,Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler,,,,,195967001,Asthma
+2024-01-10T10:00:00Z,,synthetic-p07,,synthetic-e07-a,860975,Metformin hydrochloride 500 MG Oral Tablet,,,,,44054006,Type 2 diabetes mellitus
+2024-01-10T10:00:00Z,,synthetic-p08,,synthetic-e08-a,314076,Lisinopril 10 MG Oral Tablet,,,,,59621000,Essential hypertension
+2024-01-10T10:00:00Z,,synthetic-p09,,synthetic-e09-a,745679,Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler,,,,,195967001,Asthma
+2024-01-10T10:00:00Z,,synthetic-p10,,synthetic-e10-a,860975,Metformin hydrochloride 500 MG Oral Tablet,,,,,44054006,Type 2 diabetes mellitus
+2024-08-01T00:00:00Z,2024-08-08T00:00:00Z,synthetic-p01,,synthetic-e01-b,308191,Amoxicillin 500 MG Oral Capsule,,,,,,

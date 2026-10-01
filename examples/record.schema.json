@@ -1,0 +1,938 @@
+{
+  "$defs": {
+    "Annotation": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "placeholder": {
+          "title": "Placeholder",
+          "type": "string"
+        },
+        "entity_type": {
+          "title": "Entity Type",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "minimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "source_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Code"
+        },
+        "source_table": {
+          "title": "Source Table",
+          "type": "string"
+        },
+        "source_row": {
+          "minimum": 2,
+          "title": "Source Row",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "fact_id",
+        "placeholder",
+        "entity_type",
+        "text",
+        "start",
+        "end",
+        "source_code",
+        "source_table",
+        "source_row"
+      ],
+      "title": "Annotation",
+      "type": "object"
+    },
+    "ConditionFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "pattern": "^(COND|MED|OBS|PROC)_[a-f0-9]{64}$",
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "patient_id": {
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "encounter_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Encounter Id"
+        },
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "system": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "System"
+        },
+        "source": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "start": {
+          "format": "date",
+          "title": "Start",
+          "type": "string"
+        },
+        "stop": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop"
+        },
+        "originating_encounter_start": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Originating Encounter Start"
+        },
+        "active_at_encounter": {
+          "default": false,
+          "title": "Active At Encounter",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "fact_id",
+        "patient_id",
+        "encounter_id",
+        "code",
+        "description",
+        "source",
+        "start"
+      ],
+      "title": "ConditionFact",
+      "type": "object"
+    },
+    "Encounter": {
+      "additionalProperties": false,
+      "properties": {
+        "encounter_id": {
+          "minLength": 1,
+          "title": "Encounter Id",
+          "type": "string"
+        },
+        "patient_id": {
+          "minLength": 1,
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "start": {
+          "format": "date-time",
+          "title": "Start",
+          "type": "string"
+        },
+        "stop": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop"
+        },
+        "encounter_class": {
+          "title": "Encounter Class",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "age": {
+          "minimum": 0,
+          "title": "Age",
+          "type": "integer"
+        },
+        "source": {
+          "$ref": "#/$defs/Provenance"
+        }
+      },
+      "required": [
+        "encounter_id",
+        "patient_id",
+        "start",
+        "encounter_class",
+        "description",
+        "age",
+        "source"
+      ],
+      "title": "Encounter",
+      "type": "object"
+    },
+    "Generation": {
+      "additionalProperties": false,
+      "properties": {
+        "renderer": {
+          "enum": [
+            "template",
+            "llm"
+          ],
+          "title": "Renderer",
+          "type": "string"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model"
+        },
+        "provider": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Provider"
+        },
+        "prompt_version": {
+          "default": "2.0",
+          "title": "Prompt Version",
+          "type": "string"
+        },
+        "seed": {
+          "title": "Seed",
+          "type": "integer"
+        },
+        "settings": {
+          "additionalProperties": true,
+          "title": "Settings",
+          "type": "object"
+        },
+        "template": {
+          "title": "Template",
+          "type": "string"
+        },
+        "attempts": {
+          "minimum": 1,
+          "title": "Attempts",
+          "type": "integer"
+        },
+        "failures": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Failures",
+          "type": "array"
+        },
+        "cached": {
+          "default": false,
+          "title": "Cached",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "renderer",
+        "seed",
+        "template",
+        "attempts"
+      ],
+      "title": "Generation",
+      "type": "object"
+    },
+    "MedicationFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "pattern": "^(COND|MED|OBS|PROC)_[a-f0-9]{64}$",
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "patient_id": {
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "encounter_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Encounter Id"
+        },
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "system": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "System"
+        },
+        "source": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "start": {
+          "format": "date-time",
+          "title": "Start",
+          "type": "string"
+        },
+        "stop": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "active_at_encounter": {
+          "default": false,
+          "title": "Active At Encounter",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "fact_id",
+        "patient_id",
+        "encounter_id",
+        "code",
+        "description",
+        "source",
+        "start"
+      ],
+      "title": "MedicationFact",
+      "type": "object"
+    },
+    "Note": {
+      "additionalProperties": false,
+      "properties": {
+        "style": {
+          "$ref": "#/$defs/NoteStyle"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "style",
+        "text"
+      ],
+      "title": "Note",
+      "type": "object"
+    },
+    "NoteStyle": {
+      "enum": [
+        "concise",
+        "soap",
+        "narrative"
+      ],
+      "title": "NoteStyle",
+      "type": "string"
+    },
+    "ObservationFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "pattern": "^(COND|MED|OBS|PROC)_[a-f0-9]{64}$",
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "patient_id": {
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "encounter_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Encounter Id"
+        },
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "system": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "System"
+        },
+        "source": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "timestamp": {
+          "format": "date-time",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "value": {
+          "minLength": 1,
+          "title": "Value",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        },
+        "category": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category"
+        },
+        "value_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value Type"
+        }
+      },
+      "required": [
+        "fact_id",
+        "patient_id",
+        "encounter_id",
+        "code",
+        "description",
+        "source",
+        "timestamp",
+        "value",
+        "unit"
+      ],
+      "title": "ObservationFact",
+      "type": "object"
+    },
+    "Patient": {
+      "additionalProperties": false,
+      "properties": {
+        "patient_id": {
+          "minLength": 1,
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "birth_date": {
+          "format": "date",
+          "title": "Birth Date",
+          "type": "string"
+        },
+        "sex": {
+          "minLength": 1,
+          "title": "Sex",
+          "type": "string"
+        },
+        "synthetic_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Synthetic Name"
+        },
+        "race": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Race"
+        },
+        "ethnicity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ethnicity"
+        },
+        "source": {
+          "$ref": "#/$defs/Provenance"
+        }
+      },
+      "required": [
+        "patient_id",
+        "birth_date",
+        "sex",
+        "source"
+      ],
+      "title": "Patient",
+      "type": "object"
+    },
+    "ProcedureFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "pattern": "^(COND|MED|OBS|PROC)_[a-f0-9]{64}$",
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "patient_id": {
+          "title": "Patient Id",
+          "type": "string"
+        },
+        "encounter_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Encounter Id"
+        },
+        "code": {
+          "minLength": 1,
+          "title": "Code",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "system": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "System"
+        },
+        "source": {
+          "$ref": "#/$defs/Provenance"
+        },
+        "timestamp": {
+          "format": "date-time",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "stop": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stop"
+        }
+      },
+      "required": [
+        "fact_id",
+        "patient_id",
+        "encounter_id",
+        "code",
+        "description",
+        "source",
+        "timestamp"
+      ],
+      "title": "ProcedureFact",
+      "type": "object"
+    },
+    "Provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "table": {
+          "title": "Table",
+          "type": "string"
+        },
+        "row": {
+          "minimum": 2,
+          "title": "Row",
+          "type": "integer"
+        },
+        "row_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Row Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "table",
+        "row",
+        "row_sha256"
+      ],
+      "title": "Provenance",
+      "type": "object"
+    },
+    "SelectedFacts": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "items": {
+            "$ref": "#/$defs/ConditionFact"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "medications": {
+          "items": {
+            "$ref": "#/$defs/MedicationFact"
+          },
+          "title": "Medications",
+          "type": "array"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/ObservationFact"
+          },
+          "title": "Observations",
+          "type": "array"
+        },
+        "procedures": {
+          "items": {
+            "$ref": "#/$defs/ProcedureFact"
+          },
+          "title": "Procedures",
+          "type": "array"
+        }
+      },
+      "title": "SelectedFacts",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset": {
+          "const": "synthea-compatible-synthetic",
+          "default": "synthea-compatible-synthetic",
+          "title": "Dataset",
+          "type": "string"
+        },
+        "patient": {
+          "$ref": "#/$defs/Patient"
+        },
+        "encounter": {
+          "$ref": "#/$defs/Encounter"
+        }
+      },
+      "required": [
+        "patient",
+        "encounter"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "Target": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "items": {
+            "$ref": "#/$defs/TargetEntity"
+          },
+          "title": "Conditions",
+          "type": "array"
+        },
+        "medications": {
+          "items": {
+            "$ref": "#/$defs/TargetEntity"
+          },
+          "title": "Medications",
+          "type": "array"
+        },
+        "observations": {
+          "items": {
+            "$ref": "#/$defs/TargetObservation"
+          },
+          "title": "Observations",
+          "type": "array"
+        },
+        "procedures": {
+          "items": {
+            "$ref": "#/$defs/TargetEntity"
+          },
+          "title": "Procedures",
+          "type": "array"
+        }
+      },
+      "title": "Target",
+      "type": "object"
+    },
+    "TargetEntity": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description"
+      ],
+      "title": "TargetEntity",
+      "type": "object"
+    },
+    "TargetObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        },
+        "unit": {
+          "title": "Unit",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "value",
+        "unit"
+      ],
+      "title": "TargetObservation",
+      "type": "object"
+    },
+    "Validation": {
+      "additionalProperties": false,
+      "properties": {
+        "passed": {
+          "title": "Passed",
+          "type": "boolean"
+        },
+        "issues": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Issues",
+          "type": "array"
+        }
+      },
+      "required": [
+        "passed"
+      ],
+      "title": "Validation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "2.0",
+      "default": "2.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "record_id": {
+      "title": "Record Id",
+      "type": "string"
+    },
+    "patient_id": {
+      "title": "Patient Id",
+      "type": "string"
+    },
+    "encounter_id": {
+      "title": "Encounter Id",
+      "type": "string"
+    },
+    "split": {
+      "enum": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "title": "Split",
+      "type": "string"
+    },
+    "note": {
+      "$ref": "#/$defs/Note"
+    },
+    "target": {
+      "$ref": "#/$defs/Target"
+    },
+    "selected_facts": {
+      "$ref": "#/$defs/SelectedFacts"
+    },
+    "annotations": {
+      "items": {
+        "$ref": "#/$defs/Annotation"
+      },
+      "title": "Annotations",
+      "type": "array"
+    },
+    "source": {
+      "$ref": "#/$defs/Source"
+    },
+    "generation": {
+      "$ref": "#/$defs/Generation"
+    },
+    "validation": {
+      "$ref": "#/$defs/Validation"
+    }
+  },
+  "required": [
+    "record_id",
+    "patient_id",
+    "encounter_id",
+    "split",
+    "note",
+    "target",
+    "selected_facts",
+    "annotations",
+    "source",
+    "generation",
+    "validation"
+  ],
+  "title": "Record",
+  "type": "object"
+}

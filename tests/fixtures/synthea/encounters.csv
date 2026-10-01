@@ -1,0 +1,22 @@
+Id,START,STOP,PATIENT,ORGANIZATION,PROVIDER,PAYER,ENCOUNTERCLASS,CODE,DESCRIPTION,BASE_ENCOUNTER_COST,TOTAL_CLAIM_COST,PAYER_COVERAGE,REASONCODE,REASONDESCRIPTION
+synthetic-e01-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p01,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-e01-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p01,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-e02-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p02,,,,ambulatory,185349003,Encounter for check up,,,,59621000,Essential hypertension
+synthetic-e02-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p02,,,,ambulatory,185349003,Encounter for check up,,,,59621000,Essential hypertension
+synthetic-e03-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p03,,,,ambulatory,185349003,Encounter for check up,,,,195967001,Asthma
+synthetic-e03-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p03,,,,ambulatory,185349003,Encounter for check up,,,,195967001,Asthma
+synthetic-e04-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p04,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-e04-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p04,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-e05-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p05,,,,ambulatory,185349003,Encounter for check up,,,,59621000,Essential hypertension
+synthetic-e05-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p05,,,,ambulatory,185349003,Encounter for check up,,,,59621000,Essential hypertension
+synthetic-e06-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p06,,,,ambulatory,185349003,Encounter for check up,,,,195967001,Asthma
+synthetic-e06-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p06,,,,ambulatory,185349003,Encounter for check up,,,,195967001,Asthma
+synthetic-e07-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p07,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-e07-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p07,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-e08-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p08,,,,ambulatory,185349003,Encounter for check up,,,,59621000,Essential hypertension
+synthetic-e08-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p08,,,,ambulatory,185349003,Encounter for check up,,,,59621000,Essential hypertension
+synthetic-e09-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p09,,,,ambulatory,185349003,Encounter for check up,,,,195967001,Asthma
+synthetic-e09-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p09,,,,ambulatory,185349003,Encounter for check up,,,,195967001,Asthma
+synthetic-e10-a,2024-01-10T10:00:00Z,2024-01-10T10:30:00Z,synthetic-p10,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-e10-b,2024-07-10T10:00:00Z,2024-07-10T10:30:00Z,synthetic-p10,,,,ambulatory,185349003,Encounter for check up,,,,44054006,Type 2 diabetes mellitus
+synthetic-inpatient,2024-08-01T00:00:00Z,2024-08-02T00:00:00Z,synthetic-p01,,,,inpatient,fixture-inpatient,Fabricated inpatient encounter,,,,,

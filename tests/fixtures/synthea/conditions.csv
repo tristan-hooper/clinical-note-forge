@@ -1,0 +1,12 @@
+START,STOP,PATIENT,ENCOUNTER,SYSTEM,CODE,DESCRIPTION
+2023-12-01,,synthetic-p01,synthetic-e01-a,http://snomed.info/sct,44054006,Type 2 diabetes mellitus
+2023-12-01,,synthetic-p02,synthetic-e02-a,http://snomed.info/sct,59621000,Essential hypertension
+2023-12-01,,synthetic-p03,synthetic-e03-a,http://snomed.info/sct,195967001,Asthma
+2023-12-01,,synthetic-p04,synthetic-e04-a,http://snomed.info/sct,44054006,Type 2 diabetes mellitus
+2023-12-01,,synthetic-p05,synthetic-e05-a,http://snomed.info/sct,59621000,Essential hypertension
+2023-12-01,,synthetic-p06,synthetic-e06-a,http://snomed.info/sct,195967001,Asthma
+2023-12-01,,synthetic-p07,synthetic-e07-a,http://snomed.info/sct,44054006,Type 2 diabetes mellitus
+2023-12-01,,synthetic-p08,synthetic-e08-a,http://snomed.info/sct,59621000,Essential hypertension
+2023-12-01,,synthetic-p09,synthetic-e09-a,http://snomed.info/sct,195967001,Asthma
+2023-12-01,,synthetic-p10,synthetic-e10-a,http://snomed.info/sct,44054006,Type 2 diabetes mellitus
+2024-01-10,2024-01-31,synthetic-p01,synthetic-e01-a,http://snomed.info/sct,10509002,Acute bronchitis

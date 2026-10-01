@@ -1,0 +1,1648 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClinicalNoteForge sample report</title><style>
+body{font:16px system-ui,sans-serif;max-width:1000px;margin:2rem auto;padding:0 1rem;
+background:#f5f7fa;color:#182637}article{background:white;padding:1.5rem;margin:1.5rem 0;
+border:1px solid #ccd5df;border-radius:8px}pre{white-space:pre-wrap;overflow-wrap:anywhere;
+line-height:1.7}mark{background:#d4eef0;color:#152f36;padding:.1em}summary{cursor:pointer}
+</style><h1>ClinicalNoteForge</h1><p>Synthetic data only. Not clinically validated.
+Highlights are authoritative inserted facts; hover for source table and row.</p><article><h2>concise · train</h2><p>synthetic-e01-a · validation: passed</p><pre>Progress note
+<mark title="ENCOUNTER · encounters:2">Encounter for check up</mark> on <mark title="DATE · encounters:2">2024-01-10</mark>.
+<mark title="AGE · patients:2">62</mark>-year-old patient; sex recorded as <mark title="SEX · patients:2">F</mark>.
+Dx: <mark title="CONDITION · conditions:2">Type 2 diabetes mellitus</mark>; <mark title="CONDITION · conditions:12">Acute bronchitis</mark>.
+Meds: <mark title="MEDICATION · medications:2">Metformin hydrochloride 500 MG Oral Tablet</mark>.
+Obs: <mark title="OBSERVATION_NAME · observations:2">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:2">61.00</mark> <mark title="OBSERVATION_UNIT · observations:2">kg</mark>; <mark title="OBSERVATION_NAME · observations:22">Hemoglobin A1c</mark>: <mark title="OBSERVATION_VALUE · observations:22">8.20</mark> <mark title="OBSERVATION_UNIT · observations:22">%</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Type 2 diabetes mellitus&quot;
+    },
+    {
+      &quot;description&quot;: &quot;Acute bronchitis&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;61.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    },
+    {
+      &quot;description&quot;: &quot;Hemoglobin A1c&quot;,
+      &quot;value&quot;: &quot;8.20&quot;,
+      &quot;unit&quot;: &quot;%&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e01-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 14,
+    &quot;end&quot;: 36,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e01-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 40,
+    &quot;end&quot;: 50,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p01&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;62&quot;,
+    &quot;start&quot;: 52,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p01&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 89,
+    &quot;end&quot;: 90,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_1de79eac8a331e79a54a4eb10b6d0747f5d9633b6168784d0bd05870c1ac8253&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Type 2 diabetes mellitus&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 120,
+    &quot;source_code&quot;: &quot;44054006&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_c8eb6f4070342eacaab2d02458feac83d1fc9e8e6e364bd3cbc6c19d1806a6b9&quot;,
+    &quot;placeholder&quot;: &quot;COND_2&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Acute bronchitis&quot;,
+    &quot;start&quot;: 122,
+    &quot;end&quot;: 138,
+    &quot;source_code&quot;: &quot;10509002&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 12
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_0e9632d1e1bce9ff2e51d5a36b802f4aa2eb7a5fef00521e176b2afe5832f844&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;,
+    &quot;start&quot;: 146,
+    &quot;end&quot;: 188,
+    &quot;source_code&quot;: &quot;860975&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_a62727bedf1abe85a5b1313ec0ad230354df93ebc5e091468ea01370395a5a61&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 195,
+    &quot;end&quot;: 206,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_a62727bedf1abe85a5b1313ec0ad230354df93ebc5e091468ea01370395a5a61&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;61.00&quot;,
+    &quot;start&quot;: 208,
+    &quot;end&quot;: 213,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_a62727bedf1abe85a5b1313ec0ad230354df93ebc5e091468ea01370395a5a61&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 214,
+    &quot;end&quot;: 216,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_f5941309ac6d55dec933ff94fbf285478d3fa04803a3504ffde69048594c0c12&quot;,
+    &quot;placeholder&quot;: &quot;OBS_2_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Hemoglobin A1c&quot;,
+    &quot;start&quot;: 218,
+    &quot;end&quot;: 232,
+    &quot;source_code&quot;: &quot;4548-4&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 22
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_f5941309ac6d55dec933ff94fbf285478d3fa04803a3504ffde69048594c0c12&quot;,
+    &quot;placeholder&quot;: &quot;OBS_2_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;8.20&quot;,
+    &quot;start&quot;: 234,
+    &quot;end&quot;: 238,
+    &quot;source_code&quot;: &quot;4548-4&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 22
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_f5941309ac6d55dec933ff94fbf285478d3fa04803a3504ffde69048594c0c12&quot;,
+    &quot;placeholder&quot;: &quot;OBS_2_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;%&quot;,
+    &quot;start&quot;: 239,
+    &quot;end&quot;: 240,
+    &quot;source_code&quot;: &quot;4548-4&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 22
+  }
+]</pre></details></article><article><h2>soap · train</h2><p>synthetic-e02-a · validation: passed</p><pre>SOAP note
+S — Encounter context
+<mark title="ENCOUNTER · encounters:4">Encounter for check up</mark> on <mark title="DATE · encounters:4">2024-01-10</mark>.
+<mark title="AGE · patients:3">61</mark>-year-old patient; sex recorded as <mark title="SEX · patients:3">M</mark>.
+O — Recorded measurements and procedures
+Observations: <mark title="OBSERVATION_NAME · observations:4">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:4">62.00</mark> <mark title="OBSERVATION_UNIT · observations:4">kg</mark>.
+A — Recorded conditions
+<mark title="CONDITION · conditions:3">Essential hypertension</mark>.
+P — Medication record
+<mark title="MEDICATION · medications:3">Lisinopril 10 MG Oral Tablet</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Essential hypertension&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;62.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e02-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 32,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e02-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 58,
+    &quot;end&quot;: 68,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p02&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;61&quot;,
+    &quot;start&quot;: 70,
+    &quot;end&quot;: 72,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p02&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;M&quot;,
+    &quot;start&quot;: 107,
+    &quot;end&quot;: 108,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_d589fecefe8cc03f9af43a9a0c305b29deff8c45cf5c18a7064df675f156a01a&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 165,
+    &quot;end&quot;: 176,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_d589fecefe8cc03f9af43a9a0c305b29deff8c45cf5c18a7064df675f156a01a&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;62.00&quot;,
+    &quot;start&quot;: 178,
+    &quot;end&quot;: 183,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_d589fecefe8cc03f9af43a9a0c305b29deff8c45cf5c18a7064df675f156a01a&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 184,
+    &quot;end&quot;: 186,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_fea9827198e625d37cb6073320a9865b09ed5a2d7731061088de8e8cc759a3eb&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Essential hypertension&quot;,
+    &quot;start&quot;: 212,
+    &quot;end&quot;: 234,
+    &quot;source_code&quot;: &quot;59621000&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_04c85a6befd15c3db158623b7becc133f241ae3dc3b1491948ec9cf361248e70&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;,
+    &quot;start&quot;: 258,
+    &quot;end&quot;: 286,
+    &quot;source_code&quot;: &quot;314076&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 3
+  }
+]</pre></details></article><article><h2>narrative · train</h2><p>synthetic-e06-a · validation: passed</p><pre>The record documents <mark title="ENCOUNTER · encounters:12">Encounter for check up</mark> on <mark title="DATE · encounters:12">2024-01-10</mark>. <mark title="AGE · patients:7">57</mark>-year-old patient; sex recorded as <mark title="SEX · patients:7">M</mark>.
+Conditions active at this encounter were <mark title="CONDITION · conditions:7">Asthma</mark>.
+Medications active at this encounter were <mark title="MEDICATION · medications:7">Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler</mark>.
+Encounter-linked observations were recorded as <mark title="OBSERVATION_NAME · observations:12">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:12">66.00</mark> <mark title="OBSERVATION_UNIT · observations:12">kg</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Asthma&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;66.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e06-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 21,
+    &quot;end&quot;: 43,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 12
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e06-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 47,
+    &quot;end&quot;: 57,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 12
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p06&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;57&quot;,
+    &quot;start&quot;: 59,
+    &quot;end&quot;: 61,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p06&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;M&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 97,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_afe792b112a1e75e568c531238a99bed3b78efaa4e09d402b30a1cedc7a516b7&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Asthma&quot;,
+    &quot;start&quot;: 140,
+    &quot;end&quot;: 146,
+    &quot;source_code&quot;: &quot;195967001&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_de418198438c55f181f8ee5cfbf1bc9e8de1a34aa89352b963a4a70887a1c96f&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;,
+    &quot;start&quot;: 190,
+    &quot;end&quot;: 235,
+    &quot;source_code&quot;: &quot;745679&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_8f65030676fca3ba2e1f3702782a015530ba4ab00283cbc06241aa1a329532e0&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 284,
+    &quot;end&quot;: 295,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 12
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_8f65030676fca3ba2e1f3702782a015530ba4ab00283cbc06241aa1a329532e0&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;66.00&quot;,
+    &quot;start&quot;: 297,
+    &quot;end&quot;: 302,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 12
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_8f65030676fca3ba2e1f3702782a015530ba4ab00283cbc06241aa1a329532e0&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 303,
+    &quot;end&quot;: 305,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 12
+  }
+]</pre></details></article><article><h2>concise · train</h2><p>synthetic-e03-a · validation: passed</p><pre>Progress note
+<mark title="ENCOUNTER · encounters:6">Encounter for check up</mark> on <mark title="DATE · encounters:6">2024-01-10</mark>.
+<mark title="AGE · patients:4">60</mark>-year-old patient; sex recorded as <mark title="SEX · patients:4">F</mark>.
+Dx: <mark title="CONDITION · conditions:4">Asthma</mark>.
+Meds: <mark title="MEDICATION · medications:4">Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler</mark>.
+Obs: <mark title="OBSERVATION_NAME · observations:6">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:6">63.00</mark> <mark title="OBSERVATION_UNIT · observations:6">kg</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Asthma&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;63.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e03-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 14,
+    &quot;end&quot;: 36,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e03-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 40,
+    &quot;end&quot;: 50,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p03&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;60&quot;,
+    &quot;start&quot;: 52,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p03&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 89,
+    &quot;end&quot;: 90,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_40061fb92471c2ba614cbc29b2223879867f68d21122b492f2a25fce51f97c1e&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Asthma&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 102,
+    &quot;source_code&quot;: &quot;195967001&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_bf2b8aecfd391f417057a4160acbab5553b2bb1065b33d42ce660c68161b9948&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;,
+    &quot;start&quot;: 110,
+    &quot;end&quot;: 155,
+    &quot;source_code&quot;: &quot;745679&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_fc6434ad179dc2cd071035402e7bdb855ea23fda6fc6824090d4d23db63f1d35&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 162,
+    &quot;end&quot;: 173,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_fc6434ad179dc2cd071035402e7bdb855ea23fda6fc6824090d4d23db63f1d35&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;63.00&quot;,
+    &quot;start&quot;: 175,
+    &quot;end&quot;: 180,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_fc6434ad179dc2cd071035402e7bdb855ea23fda6fc6824090d4d23db63f1d35&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 181,
+    &quot;end&quot;: 183,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 6
+  }
+]</pre></details></article><article><h2>concise · train</h2><p>synthetic-e05-a · validation: passed</p><pre>Progress note
+<mark title="ENCOUNTER · encounters:10">Encounter for check up</mark> on <mark title="DATE · encounters:10">2024-01-10</mark>.
+<mark title="AGE · patients:6">58</mark>-year-old patient; sex recorded as <mark title="SEX · patients:6">F</mark>.
+Dx: <mark title="CONDITION · conditions:6">Essential hypertension</mark>.
+Meds: <mark title="MEDICATION · medications:6">Lisinopril 10 MG Oral Tablet</mark>.
+Obs: <mark title="OBSERVATION_NAME · observations:10">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:10">65.00</mark> <mark title="OBSERVATION_UNIT · observations:10">kg</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Essential hypertension&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;65.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e05-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 14,
+    &quot;end&quot;: 36,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e05-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 40,
+    &quot;end&quot;: 50,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p05&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;58&quot;,
+    &quot;start&quot;: 52,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p05&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 89,
+    &quot;end&quot;: 90,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_968f38cf7ef677a2423dd9cadacaa465b192147a56d477b6aa097a4446e75145&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Essential hypertension&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 118,
+    &quot;source_code&quot;: &quot;59621000&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_b4a807c0ccec2cd09b8638485db999d8b28a17add590d2efbde8cba3426c4904&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;,
+    &quot;start&quot;: 126,
+    &quot;end&quot;: 154,
+    &quot;source_code&quot;: &quot;314076&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_0ad758acf79e7c3e7b2ff31613ad1d949608817a832f60ed8cae1893c16fa7e5&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 161,
+    &quot;end&quot;: 172,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_0ad758acf79e7c3e7b2ff31613ad1d949608817a832f60ed8cae1893c16fa7e5&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;65.00&quot;,
+    &quot;start&quot;: 174,
+    &quot;end&quot;: 179,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_0ad758acf79e7c3e7b2ff31613ad1d949608817a832f60ed8cae1893c16fa7e5&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 180,
+    &quot;end&quot;: 182,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 10
+  }
+]</pre></details></article><article><h2>soap · train</h2><p>synthetic-e07-a · validation: passed</p><pre>SOAP note
+S — Encounter context
+<mark title="ENCOUNTER · encounters:14">Encounter for check up</mark> on <mark title="DATE · encounters:14">2024-01-10</mark>.
+<mark title="AGE · patients:8">56</mark>-year-old patient; sex recorded as <mark title="SEX · patients:8">F</mark>.
+O — Recorded measurements and procedures
+Observations: <mark title="OBSERVATION_NAME · observations:14">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:14">67.00</mark> <mark title="OBSERVATION_UNIT · observations:14">kg</mark>.
+A — Recorded conditions
+<mark title="CONDITION · conditions:8">Type 2 diabetes mellitus</mark>.
+P — Medication record
+<mark title="MEDICATION · medications:8">Metformin hydrochloride 500 MG Oral Tablet</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Type 2 diabetes mellitus&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;67.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e07-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 32,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 14
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e07-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 58,
+    &quot;end&quot;: 68,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 14
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p07&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;56&quot;,
+    &quot;start&quot;: 70,
+    &quot;end&quot;: 72,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 8
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p07&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 107,
+    &quot;end&quot;: 108,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 8
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_1d31bb2a0012917aff4e5cbc01384748373aad18079f0bb9807c6ba399ff9c96&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 165,
+    &quot;end&quot;: 176,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 14
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_1d31bb2a0012917aff4e5cbc01384748373aad18079f0bb9807c6ba399ff9c96&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;67.00&quot;,
+    &quot;start&quot;: 178,
+    &quot;end&quot;: 183,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 14
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_1d31bb2a0012917aff4e5cbc01384748373aad18079f0bb9807c6ba399ff9c96&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 184,
+    &quot;end&quot;: 186,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 14
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_0249b671c0d8306ab3255e456768634bef1f1bc516c44e53228eab7fe018fdda&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Type 2 diabetes mellitus&quot;,
+    &quot;start&quot;: 212,
+    &quot;end&quot;: 236,
+    &quot;source_code&quot;: &quot;44054006&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 8
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_0da46e43d855bca6778d30700523602e3a439420c5158fef1f7082c9402eaf96&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;,
+    &quot;start&quot;: 260,
+    &quot;end&quot;: 302,
+    &quot;source_code&quot;: &quot;860975&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 8
+  }
+]</pre></details></article><article><h2>concise · train</h2><p>synthetic-e09-a · validation: passed</p><pre>Progress note
+<mark title="ENCOUNTER · encounters:18">Encounter for check up</mark> on <mark title="DATE · encounters:18">2024-01-10</mark>.
+<mark title="AGE · patients:10">54</mark>-year-old patient; sex recorded as <mark title="SEX · patients:10">F</mark>.
+Dx: <mark title="CONDITION · conditions:10">Asthma</mark>.
+Meds: <mark title="MEDICATION · medications:10">Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler</mark>.
+Obs: <mark title="OBSERVATION_NAME · observations:18">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:18">69.00</mark> <mark title="OBSERVATION_UNIT · observations:18">kg</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Asthma&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;69.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e09-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 14,
+    &quot;end&quot;: 36,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 18
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e09-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 40,
+    &quot;end&quot;: 50,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 18
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p09&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;54&quot;,
+    &quot;start&quot;: 52,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p09&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 89,
+    &quot;end&quot;: 90,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_4c9b3e0f2c354e4675227cd90ab37080699e8e13c582bc01319c9c4948bf940e&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Asthma&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 102,
+    &quot;source_code&quot;: &quot;195967001&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_fa5df5c57f5cd6a3126d8b8bf8e6bd4dee8eb98269b974ac981ccd9f798306fc&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;,
+    &quot;start&quot;: 110,
+    &quot;end&quot;: 155,
+    &quot;source_code&quot;: &quot;745679&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 10
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_bf4d97162bf4e37c951e22caecd6138149fe619db8f08835449ae3cc69f4b73b&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 162,
+    &quot;end&quot;: 173,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 18
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_bf4d97162bf4e37c951e22caecd6138149fe619db8f08835449ae3cc69f4b73b&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;69.00&quot;,
+    &quot;start&quot;: 175,
+    &quot;end&quot;: 180,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 18
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_bf4d97162bf4e37c951e22caecd6138149fe619db8f08835449ae3cc69f4b73b&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 181,
+    &quot;end&quot;: 183,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 18
+  }
+]</pre></details></article><article><h2>concise · train</h2><p>synthetic-e10-a · validation: passed</p><pre>Progress note
+<mark title="ENCOUNTER · encounters:20">Encounter for check up</mark> on <mark title="DATE · encounters:20">2024-01-10</mark>.
+<mark title="AGE · patients:11">53</mark>-year-old patient; sex recorded as <mark title="SEX · patients:11">M</mark>.
+Dx: <mark title="CONDITION · conditions:11">Type 2 diabetes mellitus</mark>.
+Meds: <mark title="MEDICATION · medications:11">Metformin hydrochloride 500 MG Oral Tablet</mark>.
+Obs: <mark title="OBSERVATION_NAME · observations:20">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:20">70.00</mark> <mark title="OBSERVATION_UNIT · observations:20">kg</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Type 2 diabetes mellitus&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;70.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: []
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e10-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 14,
+    &quot;end&quot;: 36,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 20
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e10-a&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-01-10&quot;,
+    &quot;start&quot;: 40,
+    &quot;end&quot;: 50,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 20
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p10&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;53&quot;,
+    &quot;start&quot;: 52,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p10&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;M&quot;,
+    &quot;start&quot;: 89,
+    &quot;end&quot;: 90,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_b666cdae3eeadeb97b1a87c43d9adf363cfce6f154d9598d392ebb94ac2acf99&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Type 2 diabetes mellitus&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 120,
+    &quot;source_code&quot;: &quot;44054006&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_789ff7ba39a29c473efc1ca4787a920329c7ec43887a6c4dd81804a4eaf0b913&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;,
+    &quot;start&quot;: 128,
+    &quot;end&quot;: 170,
+    &quot;source_code&quot;: &quot;860975&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_f7891f247ce45774da221be3fbd39908e8df53fc2f4ed5fcf7eb2f2d080ddac7&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 177,
+    &quot;end&quot;: 188,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 20
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_f7891f247ce45774da221be3fbd39908e8df53fc2f4ed5fcf7eb2f2d080ddac7&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;70.00&quot;,
+    &quot;start&quot;: 190,
+    &quot;end&quot;: 195,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 20
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_f7891f247ce45774da221be3fbd39908e8df53fc2f4ed5fcf7eb2f2d080ddac7&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 196,
+    &quot;end&quot;: 198,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 20
+  }
+]</pre></details></article><article><h2>narrative · train</h2><p>synthetic-e01-b · validation: passed</p><pre>The record documents <mark title="ENCOUNTER · encounters:3">Encounter for check up</mark> on <mark title="DATE · encounters:3">2024-07-10</mark>. <mark title="AGE · patients:2">63</mark>-year-old patient; sex recorded as <mark title="SEX · patients:2">F</mark>.
+Conditions active at this encounter were <mark title="CONDITION · conditions:2">Type 2 diabetes mellitus</mark>.
+Medications active at this encounter were <mark title="MEDICATION · medications:2">Metformin hydrochloride 500 MG Oral Tablet</mark>.
+Encounter-linked observations were recorded as <mark title="OBSERVATION_NAME · observations:23">Fabricated survey, résumé example</mark>: <mark title="OBSERVATION_VALUE · observations:23">Example response — café</mark> ; <mark title="OBSERVATION_NAME · observations:3">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:3">61.00</mark> <mark title="OBSERVATION_UNIT · observations:3">kg</mark>.
+The encounter procedure record lists <mark title="PROCEDURE · procedures:2">Depression screening</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Type 2 diabetes mellitus&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Fabricated survey, résumé example&quot;,
+      &quot;value&quot;: &quot;Example response — café&quot;,
+      &quot;unit&quot;: &quot;&quot;
+    },
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;61.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: [
+    {
+      &quot;description&quot;: &quot;Depression screening&quot;
+    }
+  ]
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e01-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 21,
+    &quot;end&quot;: 43,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e01-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-07-10&quot;,
+    &quot;start&quot;: 47,
+    &quot;end&quot;: 57,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p01&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;63&quot;,
+    &quot;start&quot;: 59,
+    &quot;end&quot;: 61,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p01&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 97,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_1de79eac8a331e79a54a4eb10b6d0747f5d9633b6168784d0bd05870c1ac8253&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Type 2 diabetes mellitus&quot;,
+    &quot;start&quot;: 140,
+    &quot;end&quot;: 164,
+    &quot;source_code&quot;: &quot;44054006&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_0e9632d1e1bce9ff2e51d5a36b802f4aa2eb7a5fef00521e176b2afe5832f844&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Metformin hydrochloride 500 MG Oral Tablet&quot;,
+    &quot;start&quot;: 208,
+    &quot;end&quot;: 250,
+    &quot;source_code&quot;: &quot;860975&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 2
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_90223ebaa1fcc3de382998286fb2916ad662ade203a5e4803419d8f9dec0a698&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Fabricated survey, r\u00e9sum\u00e9 example&quot;,
+    &quot;start&quot;: 299,
+    &quot;end&quot;: 332,
+    &quot;source_code&quot;: &quot;fixture-text&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 23
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_90223ebaa1fcc3de382998286fb2916ad662ade203a5e4803419d8f9dec0a698&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;Example response \u2014 caf\u00e9&quot;,
+    &quot;start&quot;: 334,
+    &quot;end&quot;: 357,
+    &quot;source_code&quot;: &quot;fixture-text&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 23
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_c88a89f1a419b62ba1b78eae366b11efce4471ce73a15601f8784a9e452da266&quot;,
+    &quot;placeholder&quot;: &quot;OBS_2_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 360,
+    &quot;end&quot;: 371,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_c88a89f1a419b62ba1b78eae366b11efce4471ce73a15601f8784a9e452da266&quot;,
+    &quot;placeholder&quot;: &quot;OBS_2_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;61.00&quot;,
+    &quot;start&quot;: 373,
+    &quot;end&quot;: 378,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_c88a89f1a419b62ba1b78eae366b11efce4471ce73a15601f8784a9e452da266&quot;,
+    &quot;placeholder&quot;: &quot;OBS_2_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 379,
+    &quot;end&quot;: 381,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;PROC_687997c174c921da560ccbfeb314356d3ba60eeedfbd4780a0a3b1191946dfdf&quot;,
+    &quot;placeholder&quot;: &quot;PROC_1&quot;,
+    &quot;entity_type&quot;: &quot;PROCEDURE&quot;,
+    &quot;text&quot;: &quot;Depression screening&quot;,
+    &quot;start&quot;: 420,
+    &quot;end&quot;: 440,
+    &quot;source_code&quot;: &quot;171207006&quot;,
+    &quot;source_table&quot;: &quot;procedures&quot;,
+    &quot;source_row&quot;: 2
+  }
+]</pre></details></article><article><h2>concise · train</h2><p>synthetic-e02-b · validation: passed</p><pre>Progress note
+<mark title="ENCOUNTER · encounters:5">Encounter for check up</mark> on <mark title="DATE · encounters:5">2024-07-10</mark>.
+<mark title="AGE · patients:3">62</mark>-year-old patient; sex recorded as <mark title="SEX · patients:3">M</mark>.
+Dx: <mark title="CONDITION · conditions:3">Essential hypertension</mark>.
+Meds: <mark title="MEDICATION · medications:3">Lisinopril 10 MG Oral Tablet</mark>.
+Obs: <mark title="OBSERVATION_NAME · observations:5">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:5">62.00</mark> <mark title="OBSERVATION_UNIT · observations:5">kg</mark>.
+Procedures: <mark title="PROCEDURE · procedures:3">Depression screening</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Essential hypertension&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;62.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: [
+    {
+      &quot;description&quot;: &quot;Depression screening&quot;
+    }
+  ]
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e02-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 14,
+    &quot;end&quot;: 36,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 5
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e02-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-07-10&quot;,
+    &quot;start&quot;: 40,
+    &quot;end&quot;: 50,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 5
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p02&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;62&quot;,
+    &quot;start&quot;: 52,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p02&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;M&quot;,
+    &quot;start&quot;: 89,
+    &quot;end&quot;: 90,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_fea9827198e625d37cb6073320a9865b09ed5a2d7731061088de8e8cc759a3eb&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Essential hypertension&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 118,
+    &quot;source_code&quot;: &quot;59621000&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_04c85a6befd15c3db158623b7becc133f241ae3dc3b1491948ec9cf361248e70&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;,
+    &quot;start&quot;: 126,
+    &quot;end&quot;: 154,
+    &quot;source_code&quot;: &quot;314076&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 3
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_3db5f9367505ee141a3015054ee3d2849ec7a0dd3b7a74e071e8024f116eac93&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 161,
+    &quot;end&quot;: 172,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 5
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_3db5f9367505ee141a3015054ee3d2849ec7a0dd3b7a74e071e8024f116eac93&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;62.00&quot;,
+    &quot;start&quot;: 174,
+    &quot;end&quot;: 179,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 5
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_3db5f9367505ee141a3015054ee3d2849ec7a0dd3b7a74e071e8024f116eac93&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 180,
+    &quot;end&quot;: 182,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 5
+  },
+  {
+    &quot;fact_id&quot;: &quot;PROC_a4d83140ee55977efec0a3e43666d93439cedee5fe78831e12a1a8f0179a8266&quot;,
+    &quot;placeholder&quot;: &quot;PROC_1&quot;,
+    &quot;entity_type&quot;: &quot;PROCEDURE&quot;,
+    &quot;text&quot;: &quot;Depression screening&quot;,
+    &quot;start&quot;: 196,
+    &quot;end&quot;: 216,
+    &quot;source_code&quot;: &quot;171207006&quot;,
+    &quot;source_table&quot;: &quot;procedures&quot;,
+    &quot;source_row&quot;: 3
+  }
+]</pre></details></article><article><h2>concise · train</h2><p>synthetic-e03-b · validation: passed</p><pre>Progress note
+<mark title="ENCOUNTER · encounters:7">Encounter for check up</mark> on <mark title="DATE · encounters:7">2024-07-10</mark>.
+<mark title="AGE · patients:4">61</mark>-year-old patient; sex recorded as <mark title="SEX · patients:4">F</mark>.
+Dx: <mark title="CONDITION · conditions:4">Asthma</mark>.
+Meds: <mark title="MEDICATION · medications:4">Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler</mark>.
+Obs: <mark title="OBSERVATION_NAME · observations:7">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:7">63.00</mark> <mark title="OBSERVATION_UNIT · observations:7">kg</mark>.
+Procedures: <mark title="PROCEDURE · procedures:4">Depression screening</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Asthma&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;63.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: [
+    {
+      &quot;description&quot;: &quot;Depression screening&quot;
+    }
+  ]
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e03-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 14,
+    &quot;end&quot;: 36,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e03-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-07-10&quot;,
+    &quot;start&quot;: 40,
+    &quot;end&quot;: 50,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p03&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;61&quot;,
+    &quot;start&quot;: 52,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p03&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 89,
+    &quot;end&quot;: 90,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_40061fb92471c2ba614cbc29b2223879867f68d21122b492f2a25fce51f97c1e&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Asthma&quot;,
+    &quot;start&quot;: 96,
+    &quot;end&quot;: 102,
+    &quot;source_code&quot;: &quot;195967001&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_bf2b8aecfd391f417057a4160acbab5553b2bb1065b33d42ce660c68161b9948&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Albuterol 0.09 MG/ACTUAT Metered Dose Inhaler&quot;,
+    &quot;start&quot;: 110,
+    &quot;end&quot;: 155,
+    &quot;source_code&quot;: &quot;745679&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 4
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_95b538e7e765a13da4e89c517750d4c26a9f59e4ce176255a39b818da3128981&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 162,
+    &quot;end&quot;: 173,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_95b538e7e765a13da4e89c517750d4c26a9f59e4ce176255a39b818da3128981&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;63.00&quot;,
+    &quot;start&quot;: 175,
+    &quot;end&quot;: 180,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_95b538e7e765a13da4e89c517750d4c26a9f59e4ce176255a39b818da3128981&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 181,
+    &quot;end&quot;: 183,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 7
+  },
+  {
+    &quot;fact_id&quot;: &quot;PROC_688ce3215cd85786d7f0d647ba12d1c69ac79c65475838b0076f6d9164a35ad6&quot;,
+    &quot;placeholder&quot;: &quot;PROC_1&quot;,
+    &quot;entity_type&quot;: &quot;PROCEDURE&quot;,
+    &quot;text&quot;: &quot;Depression screening&quot;,
+    &quot;start&quot;: 197,
+    &quot;end&quot;: 217,
+    &quot;source_code&quot;: &quot;171207006&quot;,
+    &quot;source_table&quot;: &quot;procedures&quot;,
+    &quot;source_row&quot;: 4
+  }
+]</pre></details></article><article><h2>soap · train</h2><p>synthetic-e05-b · validation: passed</p><pre>SOAP note
+S — Encounter context
+<mark title="ENCOUNTER · encounters:11">Encounter for check up</mark> on <mark title="DATE · encounters:11">2024-07-10</mark>.
+<mark title="AGE · patients:6">59</mark>-year-old patient; sex recorded as <mark title="SEX · patients:6">F</mark>.
+O — Recorded measurements and procedures
+Observations: <mark title="OBSERVATION_NAME · observations:11">Body weight</mark>: <mark title="OBSERVATION_VALUE · observations:11">65.00</mark> <mark title="OBSERVATION_UNIT · observations:11">kg</mark>.
+Procedures: <mark title="PROCEDURE · procedures:6">Depression screening</mark>.
+A — Recorded conditions
+<mark title="CONDITION · conditions:6">Essential hypertension</mark>.
+P — Medication record
+<mark title="MEDICATION · medications:6">Lisinopril 10 MG Oral Tablet</mark>.</pre><details><summary>Extraction target</summary><pre>{
+  &quot;conditions&quot;: [
+    {
+      &quot;description&quot;: &quot;Essential hypertension&quot;
+    }
+  ],
+  &quot;medications&quot;: [
+    {
+      &quot;description&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;
+    }
+  ],
+  &quot;observations&quot;: [
+    {
+      &quot;description&quot;: &quot;Body weight&quot;,
+      &quot;value&quot;: &quot;65.00&quot;,
+      &quot;unit&quot;: &quot;kg&quot;
+    }
+  ],
+  &quot;procedures&quot;: [
+    {
+      &quot;description&quot;: &quot;Depression screening&quot;
+    }
+  ]
+}</pre></details><details><summary>Fact annotations and lineage</summary><pre>[
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e05-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DESCRIPTION&quot;,
+    &quot;entity_type&quot;: &quot;ENCOUNTER&quot;,
+    &quot;text&quot;: &quot;Encounter for check up&quot;,
+    &quot;start&quot;: 32,
+    &quot;end&quot;: 54,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-e05-b&quot;,
+    &quot;placeholder&quot;: &quot;ENCOUNTER_DATE&quot;,
+    &quot;entity_type&quot;: &quot;DATE&quot;,
+    &quot;text&quot;: &quot;2024-07-10&quot;,
+    &quot;start&quot;: 58,
+    &quot;end&quot;: 68,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;encounters&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p05&quot;,
+    &quot;placeholder&quot;: &quot;AGE&quot;,
+    &quot;entity_type&quot;: &quot;AGE&quot;,
+    &quot;text&quot;: &quot;59&quot;,
+    &quot;start&quot;: 70,
+    &quot;end&quot;: 72,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;synthetic-p05&quot;,
+    &quot;placeholder&quot;: &quot;SEX&quot;,
+    &quot;entity_type&quot;: &quot;SEX&quot;,
+    &quot;text&quot;: &quot;F&quot;,
+    &quot;start&quot;: 107,
+    &quot;end&quot;: 108,
+    &quot;source_code&quot;: null,
+    &quot;source_table&quot;: &quot;patients&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_b5e189e61176a2d80387813ff1cb236ebb5655607ae263f2a3ad1370a9b50692&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_NAME&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_NAME&quot;,
+    &quot;text&quot;: &quot;Body weight&quot;,
+    &quot;start&quot;: 165,
+    &quot;end&quot;: 176,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_b5e189e61176a2d80387813ff1cb236ebb5655607ae263f2a3ad1370a9b50692&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_VALUE&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_VALUE&quot;,
+    &quot;text&quot;: &quot;65.00&quot;,
+    &quot;start&quot;: 178,
+    &quot;end&quot;: 183,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;OBS_b5e189e61176a2d80387813ff1cb236ebb5655607ae263f2a3ad1370a9b50692&quot;,
+    &quot;placeholder&quot;: &quot;OBS_1_UNIT&quot;,
+    &quot;entity_type&quot;: &quot;OBSERVATION_UNIT&quot;,
+    &quot;text&quot;: &quot;kg&quot;,
+    &quot;start&quot;: 184,
+    &quot;end&quot;: 186,
+    &quot;source_code&quot;: &quot;29463-7&quot;,
+    &quot;source_table&quot;: &quot;observations&quot;,
+    &quot;source_row&quot;: 11
+  },
+  {
+    &quot;fact_id&quot;: &quot;PROC_e34959ba2321aa2f25e71187005f1478697e3bef4c232a0506f2eb9574ff75dd&quot;,
+    &quot;placeholder&quot;: &quot;PROC_1&quot;,
+    &quot;entity_type&quot;: &quot;PROCEDURE&quot;,
+    &quot;text&quot;: &quot;Depression screening&quot;,
+    &quot;start&quot;: 200,
+    &quot;end&quot;: 220,
+    &quot;source_code&quot;: &quot;171207006&quot;,
+    &quot;source_table&quot;: &quot;procedures&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;COND_968f38cf7ef677a2423dd9cadacaa465b192147a56d477b6aa097a4446e75145&quot;,
+    &quot;placeholder&quot;: &quot;COND_1&quot;,
+    &quot;entity_type&quot;: &quot;CONDITION&quot;,
+    &quot;text&quot;: &quot;Essential hypertension&quot;,
+    &quot;start&quot;: 246,
+    &quot;end&quot;: 268,
+    &quot;source_code&quot;: &quot;59621000&quot;,
+    &quot;source_table&quot;: &quot;conditions&quot;,
+    &quot;source_row&quot;: 6
+  },
+  {
+    &quot;fact_id&quot;: &quot;MED_b4a807c0ccec2cd09b8638485db999d8b28a17add590d2efbde8cba3426c4904&quot;,
+    &quot;placeholder&quot;: &quot;MED_1&quot;,
+    &quot;entity_type&quot;: &quot;MEDICATION&quot;,
+    &quot;text&quot;: &quot;Lisinopril 10 MG Oral Tablet&quot;,
+    &quot;start&quot;: 292,
+    &quot;end&quot;: 320,
+    &quot;source_code&quot;: &quot;314076&quot;,
+    &quot;source_table&quot;: &quot;medications&quot;,
+    &quot;source_row&quot;: 6
+  }
+]</pre></details></article></html>

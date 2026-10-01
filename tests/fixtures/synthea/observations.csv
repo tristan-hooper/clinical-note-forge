@@ -1,0 +1,24 @@
+DATE,PATIENT,ENCOUNTER,CATEGORY,CODE,DESCRIPTION,VALUE,UNITS,TYPE
+2024-01-10T10:10:00Z,synthetic-p01,synthetic-e01-a,vital-signs,29463-7,Body weight,61.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p01,synthetic-e01-b,vital-signs,29463-7,Body weight,61.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p02,synthetic-e02-a,vital-signs,29463-7,Body weight,62.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p02,synthetic-e02-b,vital-signs,29463-7,Body weight,62.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p03,synthetic-e03-a,vital-signs,29463-7,Body weight,63.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p03,synthetic-e03-b,vital-signs,29463-7,Body weight,63.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p04,synthetic-e04-a,vital-signs,29463-7,Body weight,64.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p04,synthetic-e04-b,vital-signs,29463-7,Body weight,64.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p05,synthetic-e05-a,vital-signs,29463-7,Body weight,65.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p05,synthetic-e05-b,vital-signs,29463-7,Body weight,65.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p06,synthetic-e06-a,vital-signs,29463-7,Body weight,66.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p06,synthetic-e06-b,vital-signs,29463-7,Body weight,66.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p07,synthetic-e07-a,vital-signs,29463-7,Body weight,67.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p07,synthetic-e07-b,vital-signs,29463-7,Body weight,67.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p08,synthetic-e08-a,vital-signs,29463-7,Body weight,68.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p08,synthetic-e08-b,vital-signs,29463-7,Body weight,68.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p09,synthetic-e09-a,vital-signs,29463-7,Body weight,69.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p09,synthetic-e09-b,vital-signs,29463-7,Body weight,69.00,kg,numeric
+2024-01-10T10:10:00Z,synthetic-p10,synthetic-e10-a,vital-signs,29463-7,Body weight,70.00,kg,numeric
+2024-07-10T10:10:00Z,synthetic-p10,synthetic-e10-b,vital-signs,29463-7,Body weight,70.00,kg,numeric
+2024-01-10T10:05:00Z,synthetic-p01,synthetic-e01-a,laboratory,4548-4,Hemoglobin A1c,8.20,%,numeric
+2024-07-10T10:05:00Z,synthetic-p01,synthetic-e01-b,survey,fixture-text,"Fabricated survey, résumé example",Example response — café,,text
+2024-02-01T00:00:00Z,synthetic-p01,,,fixture-unlinked,Unlinked historical measure,1.000,a,numeric
