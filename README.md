@@ -80,7 +80,7 @@ failure behavior. An ingestion protocol permits a future FHIR adapter without ch
 Python 3.12 or newer is required. No API key, Java, Docker or Synthea installation is needed.
 
 ```bash
-git clone <your-published-repository-url> clinical-note-forge
+git clone https://github.com/tristan-hooper/clinical-note-forge.git clinical-note-forge
 cd clinical-note-forge
 python -m venv .venv
 ```
